@@ -1,0 +1,6 @@
+/opt/homebrew/Cellar/nginx/1.29.6/html
+
+
+/opt/homebrew/etc/nginx/nginx.conf
+
+/Users/a1-6/project/nginx/angular.conf

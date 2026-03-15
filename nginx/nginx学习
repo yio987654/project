@@ -1,0 +1,17 @@
+# 查看nginx 配置文件
+nginx -V
+nginx -t
+
+# 启动
+nginx
+
+# 停止
+nginx -s stop
+
+# 查看进程 
+ps aux | grep java
+# 只看进程名和PID
+ps -e | grep java
+
+# 杀掉所有 nginx 进程
+sudo pkill nginx
