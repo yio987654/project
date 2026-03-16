@@ -20,7 +20,7 @@ ARG JAR_FILE=target/*.jar
 # 从构建阶段复制 jar 文件到运行镜像，并统一命名为 app.jar
 COPY --from=build /app/${JAR_FILE} app.jar
 
-# 暴露应用端口
+# 暴露应用端口. server.port=7776决定
 EXPOSE 7776
 
 # 启动命令
