@@ -14,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
   styles: [],
 })
 export class App {
-   message = '等待响应...';
+   message = 'yio等待响应...';
    constructor(private http: HttpClient) {}  // 直接注入
 
   protected readonly title = signal('front-project');
