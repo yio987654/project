@@ -11,16 +11,8 @@ public class BackendApplication {
     private static final Logger log = LoggerFactory.getLogger(BackendApplication.class);
 
     public static void main(String[] args) {
-     
-        log.info("yio test1"); 
+        log.info("后端应用启动中..."); 
         SpringApplication.run(BackendApplication.class, args);
-        System.out.println("yio test");
-        try {
-            Integer a =null;
-            
-            a.toString();
-        } catch (Exception e) {
-            log.error(e.toString()); 
-        }
+        log.info("后端应用已成功启动!");
     }
 }

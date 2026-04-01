@@ -5,7 +5,7 @@ FROM node:20-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 # 根据 package-lock.json 精确安装所有依赖，比 npm install 更快、更可靠，适合自动化构建。
-RUN npm ci 
+RUN npm ci --prefer-offline 
 COPY . .
 # 运行构建命令。在 package.json 的 scripts 中，build 通常定义为 ng build，它会生成生产环境的静态文件，默认输出到 dist/ 目录下（具体路径取决于 Angular 配置）。对于这个项目，输出路径是 /app/dist/front-project/browser。
 RUN npm run build

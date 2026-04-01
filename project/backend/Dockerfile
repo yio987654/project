@@ -15,6 +15,9 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre
 # 设置工作目录
 WORKDIR /app
+# 设置时区为中国标准时间
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # 定义构建参数，便于动态 jar 名称
 ARG JAR_FILE=target/*.jar
 # 从构建阶段复制 jar 文件到运行镜像，并统一命名为 app.jar

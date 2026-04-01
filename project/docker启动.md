@@ -1,8 +1,17 @@
 # docker 启动前后端
 cd /Users/a1-6/project/project/
 # 后台启动（不占终端）,容器继续运行，你可以关闭终端
-docker-compose down
+docker-compose down 
 docker-compose up -d --build
+
+# 第一次构建（最慢，需要下载所有依赖）
+cd /Users/a1-6/project/project/
+docker-compose up -d --build
+# 之后只重建有变化的部分（很快）
+docker-compose up -d --build front-project  # 只构建前端
+docker-compose up -d --build backend        # 只构建后端
+# 使用已有的镜像，秒启动
+docker-compose up -d
 
 # 和传统部署区别
 对比/Users/a1-6/project/nginx/test1/angular.conf
