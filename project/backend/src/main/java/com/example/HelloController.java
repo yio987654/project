@@ -15,7 +15,6 @@ private static final Logger log = LoggerFactory.getLogger(HelloController.class)
     @GetMapping("/api/hello")
     public String hello() {
         log.info("yio/api/hello 进来了");
-     
-        return "Hello from Spring Boot!zhuzhuhzu";
+        return "Hello from Spring Boot!";
     }
 }
