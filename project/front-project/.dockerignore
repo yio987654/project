@@ -1,0 +1,36 @@
+# 依赖目录（会在容器中重新安装）
+node_modules/
+
+# Angular 缓存
+.angular/
+
+# 构建产物（会在容器中重新构建）
+dist/
+
+# IDE 配置
+.idea/
+.vscode/
+*.iml
+
+# Git
+.git/
+.gitignore
+
+# 文档和说明
+README.md
+
+# 测试相关
+coverage/
+.nyc_output/
+
+# 系统临时文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+logs/
+*.log
+npm-debug.log*
+
+# Prettier 配置（不需要复制到镜像中）
+.prettierrc
